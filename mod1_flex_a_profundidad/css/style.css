@@ -1,0 +1,74 @@
+*,::before,::after{
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+html{
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: rgb(156, 159, 161);
+}
+
+.container{
+    width: 450px;
+    height: 450px;
+    outline: 2px solid;
+    margin: 60px auto;
+    display: flex;
+    /*-----FLUJO DE FLEXBOX----*/
+
+    /*flex-direction: row-reverse; el main axis empieza de derecha a izquierda*/
+    /*
+    flex-direction: row; 
+    flex-wrap: wrap;
+    */
+    flex-flow: row wrap; /*resume las propiedades de flex-direction y flex-wrap*/
+
+    /*-----ALINEACIÓN EN EL MAIN-AXIS-------*/
+
+    justify-content: center;
+
+    /*-----ALINEACIÓN EN EL CROSS-AXIS-------*/
+    /*align-items: center;*/
+
+    align-content: center;/* para solucionar el espacio entre lieneas cuando usamos la propiedad wrap, es necesario el uso con el wrap, en lo contrario no se aplicará*/
+
+    /*-----flexbox y chorme---------*/
+    /*Pödemos abrir el editor de flexbox, en la hoja de estilos de nuestro inspeccionador, dirigiendonos a la propiedad display:flex;*/
+
+    /*---PROIPIEDADES DEL FLEX-ITEMS---------*/
+
+}
+
+.items{
+    width: 200px;
+    height:100px;
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.items:nth-child(1){
+    background-color: rgba(111, 0, 0,0.5);
+    
+}
+.items:nth-child(2){
+    background-color: rgba(255, 0, 0,0.5);
+   
+}
+.items:nth-child(3){
+    background-color: rgba(0, 255, 0,0.5);
+}
+.items:nth-child(4){
+    background-color: rgba(0, 0, 255,0.5);
+}
+.items:nth-child(5){
+    background-color: rgba(111, 0, 0,0.5);
+}
+.items:nth-child(6){
+    background-color: rgba(255, 0, 0,0.5);
+}
